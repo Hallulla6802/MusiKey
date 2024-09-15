@@ -6,7 +6,7 @@ public class MouseBoundaries : MonoBehaviour
 {
     public Camera _mainCamBoundaries; // Convert screen space to world space
 
-    public Transform centerObject; // The empty GameObject that follows the mouse
+    public Transform mouseSprite; // The empty GameObject that follows the mouse
     public Transform boundaryOrigin; // The empty GameObject to define the boundary origin
 
     public Vector2 _boundarySize; // Size of the boundary area in world space
@@ -18,14 +18,14 @@ public class MouseBoundaries : MonoBehaviour
     {
         
         Cursor.visible = false; // Activate and Deactivate de visibility of the cursor for Testing
-        UpdateBoundaries(); 
+        UpdateBoundaries();
     }
 
     void Update()
     {
         
         Vector3 mouseScreenPosition = Input.mousePosition; // Get the current mouse position in screen space
-        mouseScreenPosition.z = Mathf.Abs(_mainCamBoundaries.transform.position.z - centerObject.position.z);
+        mouseScreenPosition.z = Mathf.Abs(_mainCamBoundaries.transform.position.z - mouseSprite.position.z);
 
         
         Vector3 worldMousePos = _mainCamBoundaries.ScreenToWorldPoint(mouseScreenPosition); // Convert the mouse position from screen space to world space
@@ -36,7 +36,7 @@ public class MouseBoundaries : MonoBehaviour
         worldMousePos.y = Mathf.Clamp(worldMousePos.y, _boundaryMin.y, _boundaryMax.y);
 
         
-        centerObject.position = worldMousePos; // Update the centerObject position
+        mouseSprite.position = worldMousePos; // Update the centerObject position
     }
 
     void UpdateBoundaries() // Calculate min and max boundaries based on the boundaryOrigin and size
