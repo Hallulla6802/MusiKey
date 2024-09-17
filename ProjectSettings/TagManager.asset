@@ -42,3 +42,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Cursor
+    uniqueID: 3066590809
+    locked: 0
+  - name: Notes
+    uniqueID: 3786553861
+    locked: 0
