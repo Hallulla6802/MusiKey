@@ -1,10 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class OnTriggerEnterFunction : MonoBehaviour
 {
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
         if(other.gameObject.CompareTag("SpriteX") && Input.GetKeyDown(KeyCode.X))
         {
@@ -16,4 +17,6 @@ public class OnTriggerEnterFunction : MonoBehaviour
             Destroy(other.gameObject);
         }
     }
+
+   
 }
