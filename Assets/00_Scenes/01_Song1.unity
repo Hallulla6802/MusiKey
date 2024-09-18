@@ -326,7 +326,7 @@ Transform:
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: -0.1, y: -0.03, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -888,8 +888,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36407d844ab495e449fccf643933c377, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spritePrefab: {fileID: 6183256357181928410, guid: e9843eb0727a0124390fafb18d92deaa,
-    type: 3}
+  spriteZ: {fileID: 6183256357181928410, guid: e9843eb0727a0124390fafb18d92deaa, type: 3}
+  spriteX: {fileID: 6183256357181928410, guid: bc1d6e68719396a429451dfe63083e0c, type: 3}
   spawners:
   - {fileID: 1029502536}
   - {fileID: 1054425856}
@@ -902,7 +902,9 @@ MonoBehaviour:
   - {fileID: 1828854845}
   spawnKeys: 010100000201000003010000040100000501000006010000070100000801000009010000
   speed: 5
-  spriteTag: Sprite
+  spritexTag: SpriteX
+  spritezTag: SpriteZ
+  randomNumber: 0
 --- !u!1 &490021490
 GameObject:
   m_ObjectHideFlags: 0
@@ -1816,7 +1818,7 @@ Transform:
   m_GameObject: {fileID: 1919145953}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: -0.1, y: -0.03, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2472,12 +2474,12 @@ PrefabInstance:
     - target: {fileID: 8258185684917344523, guid: 2338cc7b0d4710949a4abd2eb43c89d9,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.1
       objectReference: {fileID: 0}
     - target: {fileID: 8258185684917344523, guid: 2338cc7b0d4710949a4abd2eb43c89d9,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.03
       objectReference: {fileID: 0}
     - target: {fileID: 8258185684917344523, guid: 2338cc7b0d4710949a4abd2eb43c89d9,
         type: 3}
