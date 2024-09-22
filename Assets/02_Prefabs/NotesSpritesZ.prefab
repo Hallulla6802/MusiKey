@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9092782604462691724}
   - component: {fileID: 1089601442414815523}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Z
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -96,7 +96,7 @@ GameObject:
   - component: {fileID: 4747306683769988675}
   - component: {fileID: 7132953853310811844}
   - component: {fileID: 826714369469786643}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: NotesSpritesZ
   m_TagString: SpriteZ
   m_Icon: {fileID: 0}

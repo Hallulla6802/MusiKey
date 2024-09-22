@@ -8,7 +8,7 @@ public class NoteLimit : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Spritex") || other.CompareTag("SpriteZ"))
+        if (other.CompareTag("SpriteX") || other.CompareTag("SpriteZ"))
         {
             SpriteRenderer spriteRenderer = other.GetComponent<SpriteRenderer>();
 
