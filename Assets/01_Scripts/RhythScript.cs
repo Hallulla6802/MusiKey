@@ -13,10 +13,12 @@ public class RhythScript : MonoBehaviour
     public float secondsPerBeat;  // Tiempo entre beats
     public float songPosition;    // Tiempo actual de la canción en segundos
     public float nextNoteTime;    // Controla cuándo spawnear la siguiente nota
+    public float bpmDivider = 2f;
 
     void Start()
     {
-        secondsPerBeat = 60f / bpm;  // Calcular tiempo entre beats
+        float adjustedBPM = bpm / bpmDivider;
+        secondsPerBeat = 60f / adjustedBPM;  // Calcular tiempo entre beats
         nextNoteTime = secondsPerBeat;  // La primera nota debería aparecer en el primer beat
     }
 
