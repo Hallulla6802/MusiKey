@@ -9,4 +9,14 @@ public class MenuManager : MonoBehaviour
     {
         SceneManager.LoadScene("01_Song1");
     }
+
+    public void GoToSong2()
+    {
+        SceneManager.LoadScene("02_Song2");
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit(1);
+    }
 }

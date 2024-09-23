@@ -4,17 +4,19 @@ using UnityEngine;
 
 public class DestoyNotesScript : MonoBehaviour
 {
-   
+    public AudioSource feedbackSound;
     private void OnTriggerStay(Collider other)
     {
         if (other.gameObject.CompareTag("SpriteX") && Input.GetKeyDown(KeyCode.X))
         {
             Destroy(other.gameObject);
+            feedbackSound.Play();
         }
 
         if (other.gameObject.CompareTag("SpriteZ") && Input.GetKeyDown(KeyCode.Z))
         {
             Destroy(other.gameObject);
+            feedbackSound.Play();
         }
     }
 
@@ -23,11 +25,13 @@ public class DestoyNotesScript : MonoBehaviour
         if (other.gameObject.CompareTag("SpriteX") && Input.GetKeyDown(KeyCode.X))
         {
             Destroy(other.gameObject);
+            feedbackSound.Play();
         }
 
         if (other.gameObject.CompareTag("SpriteZ") && Input.GetKeyDown(KeyCode.Z))
         {
             Destroy(other.gameObject);
+            feedbackSound.Play();
         }
     }
 
