@@ -8,6 +8,10 @@ public class UpdateUIManager : MonoBehaviour
 {
     public TextMeshPro comboDisplay;
 
+    public Image lifeDisplay;
+
+    public float currentHealth;
+    public float maxHealth;
 
     private GameManager gamMan;
 
@@ -20,5 +24,15 @@ public class UpdateUIManager : MonoBehaviour
     public void UpdateUIText()
     {
         comboDisplay.text = "x" + gamMan.combos.ToString();
+    }
+
+    public void UpdateLifeImage()
+    {
+        if(lifeDisplay != null)
+        {
+            float healhPercentage = Mathf.Clamp(currentHealth / maxHealth, 0f, 1.0f);
+
+            lifeDisplay.fillAmount = healhPercentage;
+        }
     }
 }
