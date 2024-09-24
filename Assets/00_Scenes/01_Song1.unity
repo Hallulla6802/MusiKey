@@ -658,6 +658,7 @@ MonoBehaviour:
   mouseSprite: {fileID: 1175471996}
   boundaryOrigin: {fileID: 1407050344}
   _boundarySize: {x: 6.2, y: 6.2}
+  uiManager: {fileID: 2775671}
 --- !u!1 &390337131
 GameObject:
   m_ObjectHideFlags: 0

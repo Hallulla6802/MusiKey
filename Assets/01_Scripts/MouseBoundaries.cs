@@ -14,16 +14,20 @@ public class MouseBoundaries : MonoBehaviour
     private Vector2 _boundaryMin;
     private Vector2 _boundaryMax;
 
+     public UIManagerCJ uiManager;
+
     void Start()
     {
-        
+
         Cursor.visible = false; // Activate and Deactivate de visibility of the cursor for Testing
         UpdateBoundaries();
     }
 
     void Update()
     {
-        
+       
+        if (!uiManager.isPaused)
+        {
         Vector3 mouseScreenPosition = Input.mousePosition; // Get the current mouse position in screen space
         mouseScreenPosition.z = Mathf.Abs(_mainCamBoundaries.transform.position.z - mouseSprite.position.z);
 
@@ -37,6 +41,14 @@ public class MouseBoundaries : MonoBehaviour
 
         
         mouseSprite.position = worldMousePos; // Update the centerObject position
+        }
+
+        else
+        {
+           
+        }
+        
+       
     }
 
     void UpdateBoundaries() // Calculate min and max boundaries based on the boundaryOrigin and size
