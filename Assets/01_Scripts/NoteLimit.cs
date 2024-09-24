@@ -4,7 +4,17 @@ using UnityEngine;
 
 public class NoteLimit : MonoBehaviour
 {
-    public int newOrderInLayer; 
+    public int newOrderInLayer;
+
+    
+    private GameManager gamMan;
+    private UpdateUIManager upUI;
+
+    private void Awake()
+    {
+        gamMan = FindObjectOfType<GameManager>();
+        upUI = FindObjectOfType<UpdateUIManager>();
+    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -16,8 +26,14 @@ public class NoteLimit : MonoBehaviour
             {
                 spriteRenderer.sortingOrder = newOrderInLayer;
                 Debug.Log("Order in Layer changed to: " + newOrderInLayer);
+                Destroy(other.gameObject, 0.2f);
 
-                Destroy(other.gameObject, 0.5f);
+                gamMan.combos = 0;
+                gamMan.UpdateCombos();
+                upUI.UpdateUIText();
+
+
+                
             }
         }
     }

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4747306683769988675}
   - component: {fileID: 3262567538733798995}
   - component: {fileID: 874622438945525762}
+  - component: {fileID: 5724075224798809381}
   m_Layer: 0
   m_Name: MouseSprite
   m_TagString: Untagged
@@ -105,8 +106,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.3, y: 0.3, z: 0.1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.5, y: 0.5, z: 0.3}
+  m_Center: {x: 0, y: 0, z: 0.01}
 --- !u!114 &874622438945525762
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -119,3 +120,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5f69d8bdce24f3419d80a3e1aab011e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  feedbackSound: {fileID: 0}
+--- !u!114 &5724075224798809381
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6183256357181928410}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6bf9e16a18fd34cafbd6ed118fd9ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  comboCount: 0
