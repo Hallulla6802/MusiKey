@@ -570,7 +570,7 @@ MonoBehaviour:
   prefabLayerMask:
     serializedVersion: 2
     m_Bits: 64
-  maxDistance: 5
+  maxDistance: 7
   finalTransparency: 0.2
   rayColor: {r: 1, g: 0.91536105, b: 0, a: 1}
 --- !u!1 &7521273486405331882
