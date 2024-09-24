@@ -31,10 +31,24 @@ public class NoteLimit : MonoBehaviour
                 gamMan.combos = 0;
                 gamMan.UpdateCombos();
                 upUI.UpdateUIText();
+                OnMissNote();
 
 
                 
             }
+        }
+    }
+
+    public void OnMissNote()
+    {
+
+        if(gamMan.playerLife < 0 )
+        {
+            gamMan.playerLife = 0;
+        }
+        else
+        {
+            gamMan.playerLife -= 20;
         }
     }
 }
