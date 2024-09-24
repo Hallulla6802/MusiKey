@@ -6,7 +6,8 @@ public class NoteLimit : MonoBehaviour
 {
     public int newOrderInLayer;
 
-    
+
+    [SerializeField] private float recuperativeAmount = 30f;
     private GameManager gamMan;
     private UpdateUIManager upUI;
 
@@ -32,8 +33,6 @@ public class NoteLimit : MonoBehaviour
                 gamMan.UpdateCombos();
                 upUI.UpdateUIText();
                 OnMissNote();
-
-
                 
             }
         }
@@ -45,10 +44,26 @@ public class NoteLimit : MonoBehaviour
         if(gamMan.playerLife < 0 )
         {
             gamMan.playerLife = 0;
+            upUI.UpdateLifeImage();
         }
         else
         {
             gamMan.playerLife -= 20;
+            upUI.UpdateLifeImage();
+        }
+    }
+
+    public void OnHitNote()
+    {
+        if(gamMan.playerLife == gamMan.playermaxLife)
+        {
+            gamMan.playerLife = gamMan.playermaxLife;
+            upUI.UpdateLifeImage();
+        }
+        else
+        {
+            gamMan.playerLife += recuperativeAmount;
+            upUI.UpdateLifeImage();
         }
     }
 }

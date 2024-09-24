@@ -7,7 +7,9 @@ public class GameManager : MonoBehaviour
     public int combos;
     public int songDuration;
     public int score;
+    [Space]
     public float playerLife;
+    public float playermaxLife;
 
     private void Start()
     {

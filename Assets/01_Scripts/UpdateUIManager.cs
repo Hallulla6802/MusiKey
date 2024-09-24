@@ -10,14 +10,18 @@ public class UpdateUIManager : MonoBehaviour
 
     public Image lifeDisplay;
 
-    public float currentHealth;
-    public float maxHealth;
+    private float currentHealth;
+    private float maxHealth;
 
     private GameManager gamMan;
 
     private void Start()
     {
         gamMan = FindObjectOfType<GameManager>();
+
+        currentHealth = gamMan.playerLife;
+        maxHealth = gamMan.playermaxLife;
+
         UpdateUIText();
     }
 
@@ -30,6 +34,9 @@ public class UpdateUIManager : MonoBehaviour
     {
         if(lifeDisplay != null)
         {
+            currentHealth = gamMan.playerLife;
+            maxHealth = gamMan.playermaxLife;
+
             float healhPercentage = Mathf.Clamp(currentHealth / maxHealth, 0f, 1.0f);
 
             lifeDisplay.fillAmount = healhPercentage;
