@@ -5,11 +5,13 @@ using UnityEngine;
 public class NoteLimit : MonoBehaviour
 {
     public int newOrderInLayer;
+    public int lifeLess;
 
 
     [SerializeField] private float recuperativeAmount = 30f;
     private GameManager gamMan;
     private UpdateUIManager upUI;
+
 
     private void Awake()
     {
@@ -48,7 +50,7 @@ public class NoteLimit : MonoBehaviour
         }
         else
         {
-            gamMan.playerLife -= 20;
+            gamMan.playerLife -= lifeLess;
             upUI.UpdateLifeImage();
         }
     }

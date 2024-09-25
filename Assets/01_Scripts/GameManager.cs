@@ -23,4 +23,12 @@ public class GameManager : MonoBehaviour
             combos = 0;
         }
     }
+
+    private void Update()
+    {
+        if (playerLife > playermaxLife)
+        {
+            playerLife = playermaxLife;
+        }
+    }
 }
