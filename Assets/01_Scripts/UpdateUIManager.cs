@@ -7,8 +7,11 @@ using TMPro;
 public class UpdateUIManager : MonoBehaviour
 {
     public TextMeshPro comboDisplay;
-
+    public TextMeshPro scoreDisplay;
+    public TextMeshPro missesDisplay;
+    [Space]
     public Image lifeDisplay;
+    
 
     private float currentHealth;
     private float maxHealth;
@@ -28,6 +31,8 @@ public class UpdateUIManager : MonoBehaviour
     public void UpdateUIText()
     {
         comboDisplay.text = "x" + gamMan.combos.ToString();
+        scoreDisplay.text = gamMan.score.ToString();
+        missesDisplay.text = gamMan.misses.ToString();
     }
 
     public void UpdateLifeImage()

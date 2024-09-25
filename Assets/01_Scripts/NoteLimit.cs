@@ -5,7 +5,8 @@ using UnityEngine;
 public class NoteLimit : MonoBehaviour
 {
     public int newOrderInLayer;
-    public int lifeLess;
+    public int lifeToTake;
+    public int notesScores;
 
 
     [SerializeField] private float recuperativeAmount = 30f;
@@ -50,7 +51,8 @@ public class NoteLimit : MonoBehaviour
         }
         else
         {
-            gamMan.playerLife -= lifeLess;
+            gamMan.playerLife -= lifeToTake;
+            gamMan.misses++;
             upUI.UpdateLifeImage();
         }
     }
@@ -60,6 +62,7 @@ public class NoteLimit : MonoBehaviour
         if(gamMan.playerLife == gamMan.playermaxLife)
         {
             gamMan.playerLife = gamMan.playermaxLife;
+            AddScore();
             upUI.UpdateLifeImage();
         }
         else
@@ -67,5 +70,10 @@ public class NoteLimit : MonoBehaviour
             gamMan.playerLife += recuperativeAmount;
             upUI.UpdateLifeImage();
         }
+    }
+
+    public void AddScore()
+    {
+        gamMan.score += notesScores * gamMan.combos;
     }
 }

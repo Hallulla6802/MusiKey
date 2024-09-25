@@ -5,14 +5,18 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public int combos;
-    public int songDuration;
     public int score;
+    public int misses;
     [Space]
     public float playerLife;
     public float playermaxLife;
 
     private void Start()
     {
+        misses = 0;
+        score = 0;
+        combos = 0;
+
         UpdateCombos();
     }
 
@@ -29,6 +33,11 @@ public class GameManager : MonoBehaviour
         if (playerLife > playermaxLife)
         {
             playerLife = playermaxLife;
+        }
+
+        if(misses < 0)
+        {
+            misses = 0;
         }
     }
 }
