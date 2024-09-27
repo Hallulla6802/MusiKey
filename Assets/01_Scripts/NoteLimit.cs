@@ -20,8 +20,20 @@ public class NoteLimit : MonoBehaviour
         upUI = FindObjectOfType<UpdateUIManager>();
     }
 
+    private void OnTriggerExit(Collider other)
+    {
+ 
+        gamMan.combos = 0;
+        gamMan.UpdateCombos();
+        upUI.UpdateUIText();
+        OnMissNote();
+        Destroy(other.gameObject);
+
+    }
+
     private void OnTriggerEnter(Collider other)
     {
+
         if (other.CompareTag("SpriteX") || other.CompareTag("SpriteZ"))
         {
             SpriteRenderer spriteRenderer = other.GetComponent<SpriteRenderer>();
@@ -30,13 +42,8 @@ public class NoteLimit : MonoBehaviour
             {
                 spriteRenderer.sortingOrder = newOrderInLayer;
                 Debug.Log("Order in Layer changed to: " + newOrderInLayer);
-                Destroy(other.gameObject, 0.2f);
-
-                gamMan.combos = 0;
-                gamMan.UpdateCombos();
-                upUI.UpdateUIText();
-                OnMissNote();
                 
+
             }
         }
     }
@@ -48,21 +55,24 @@ public class NoteLimit : MonoBehaviour
         {
             gamMan.playerLife = 0;
             upUI.UpdateLifeImage();
+            upUI.UpdateUIText();
         }
         else
         {
             gamMan.playerLife -= lifeToTake;
             gamMan.misses++;
             upUI.UpdateLifeImage();
+            upUI.UpdateUIText();
         }
     }
 
     public void OnHitNote()
     {
-        if(gamMan.playerLife == gamMan.playermaxLife)
+        AddScore();
+
+        if (gamMan.playerLife == gamMan.playermaxLife)
         {
             gamMan.playerLife = gamMan.playermaxLife;
-            AddScore();
             upUI.UpdateLifeImage();
         }
         else
@@ -74,6 +84,9 @@ public class NoteLimit : MonoBehaviour
 
     public void AddScore()
     {
-        gamMan.score += notesScores * gamMan.combos;
+       
+         gamMan.score += notesScores;
+         gamMan.score += notesScores * gamMan.combos;
+        
     }
 }

@@ -45,19 +45,12 @@ private void Start()
         if (gameManager.playerLife <= 0)
         {
             ActivarGameOver();
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                SceneManager.LoadScene(scene);
-            }
         }
 
         if (gameManager.playerLife > 0 && audiocountdown.timeRemaining <= 0.1)
         {
             ActivarWin();
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                SceneManager.LoadScene(nextScene);
-            }
+            
         }
 
 
@@ -97,5 +90,8 @@ private void Start()
     }
 
     
+    
+
+
 
 }

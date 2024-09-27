@@ -20,6 +20,7 @@ public class DestoyNotesScript : MonoBehaviour
             feedbackSound.Play();
 
             noteLimit.OnHitNote();
+           
         }
 
         if (other.gameObject.CompareTag("SpriteZ") && Input.GetKeyDown(KeyCode.Z))
@@ -28,6 +29,8 @@ public class DestoyNotesScript : MonoBehaviour
             feedbackSound.Play();
 
             noteLimit.OnHitNote();
+            
+            
         }
     }
 
@@ -39,6 +42,7 @@ public class DestoyNotesScript : MonoBehaviour
             feedbackSound.Play();
 
             noteLimit.OnHitNote();
+            
         }
 
         if (other.gameObject.CompareTag("SpriteZ") && Input.GetKeyDown(KeyCode.Z))
@@ -47,6 +51,7 @@ public class DestoyNotesScript : MonoBehaviour
             feedbackSound.Play();
 
             noteLimit.OnHitNote();
+            
         }
     }
 

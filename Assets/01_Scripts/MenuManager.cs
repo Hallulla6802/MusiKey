@@ -6,7 +6,10 @@ using UnityEngine.SceneManagement;
 public class MenuManager : MonoBehaviour
 
 {
-   
+    public void GoToMenu()
+    {
+        SceneManager.LoadScene("00_Menu");
+    }
  
     public void GoToSong1()
     {
