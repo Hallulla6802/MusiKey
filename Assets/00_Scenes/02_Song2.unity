@@ -894,7 +894,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 8424366503834789755, guid: 5c31fc4c91e7c2c4eb813e524d9bedd9,
     type: 2}
-  m_audioClip: {fileID: 8300000, guid: 2a13d47d1ba82764390f42b8eb5d1aa2, type: 3}
+  m_audioClip: {fileID: 8300000, guid: c5383308ecda5504ab41841ad4945c21, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -1180,7 +1180,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioSource: {fileID: 444126183}
-  bpm: 85
+  bpm: 175
   spawnPoints:
   - {fileID: 1029502536}
   - {fileID: 1054425856}

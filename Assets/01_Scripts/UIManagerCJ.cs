@@ -28,7 +28,7 @@ private void Start()
     {
         if (Input.GetKeyDown(KeyCode.P) && !panelGameOver.activeSelf && !panelWin.activeSelf)
         {
-
+            Cursor.visible = true;
 
             if (isPaused)
             {
@@ -70,6 +70,8 @@ private void Start()
     {
         panel.SetActive(false);
         isPaused = false;
+
+        Cursor.visible = false;
         Time.timeScale = 1f;
     }
 
@@ -78,6 +80,8 @@ private void Start()
         panelGameOver.SetActive(true);
         musicAudio.Pause();
         isPaused = true;
+
+        Cursor.visible = true;
         Time.timeScale = 0f;
     }
 
@@ -86,6 +90,8 @@ private void Start()
         panelWin.SetActive(true);
         musicAudio.Pause();
         isPaused = true;
+
+        Cursor.visible = true;
         Time.timeScale = 0f;
     }
 

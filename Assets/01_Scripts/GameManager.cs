@@ -17,6 +17,8 @@ public class GameManager : MonoBehaviour
         score = 0;
         combos = 0;
 
+        Time.timeScale = 1f;
+
         UpdateCombos();
     }
 
