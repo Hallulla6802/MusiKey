@@ -22,45 +22,30 @@ public class DestoyNotesScript : MonoBehaviour
     }
     private void OnTriggerStay(Collider other)
     {
+    
         Debug.Log("IsOnNote");
-        if (other.gameObject.CompareTag("SpriteX") && Input.GetKeyDown(KeyCode.X))
+        if (other.gameObject.CompareTag("SpriteX"))
         {
-            
-            bgColor = Color.magenta;
-            Destroy(other.gameObject);
-            feedbackSound.Play();
-            noteLimit.OnHitNote();
+            if (Input.GetKey(KeyCode.X))
+            {
+                bgColor = Color.magenta;
+                Destroy(other.gameObject);
+                feedbackSound.Play();
+                noteLimit.OnHitNote();
+            }
         }
 
-        if (other.gameObject.CompareTag("SpriteZ") && Input.GetKeyDown(KeyCode.Z))
+        if (other.gameObject.CompareTag("SpriteZ"))
         {
-            bgColor = Color.green;
-            Destroy(other.gameObject);
-            feedbackSound.Play();
-            noteLimit.OnHitNote();                       
-        }
-    }
+            if (Input.GetKey(KeyCode.Z))
+            {
+                bgColor = Color.green;
+                Destroy(other.gameObject);
+                feedbackSound.Play();
+                noteLimit.OnHitNote();
+          
+            }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.CompareTag("SpriteX") && Input.GetKeyDown(KeyCode.X))
-        {
-            bgColor = Color.magenta;
-            Destroy(other.gameObject);
-            feedbackSound.Play();
-
-            noteLimit.OnHitNote();
-            
-        }
-
-        if (other.gameObject.CompareTag("SpriteZ") && Input.GetKeyDown(KeyCode.Z))
-        {  
-            bgColor = Color.green;
-            Destroy(other.gameObject);
-            feedbackSound.Play();
-
-            noteLimit.OnHitNote();
-            
         }
     }
 
