@@ -62,6 +62,8 @@ private void Start()
     {
         panel.SetActive(true);
         isPaused = true;
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
         Time.timeScale = 0f;
 
     }
@@ -70,9 +72,10 @@ private void Start()
     {
         panel.SetActive(false);
         isPaused = false;
-
+        Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         Time.timeScale = 1f;
+        
     }
 
     public void ActivarGameOver()
@@ -80,7 +83,7 @@ private void Start()
         panelGameOver.SetActive(true);
         musicAudio.Pause();
         isPaused = true;
-
+        Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
         Time.timeScale = 0f;
     }
@@ -90,7 +93,7 @@ private void Start()
         panelWin.SetActive(true);
         musicAudio.Pause();
         isPaused = true;
-
+        Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
         Time.timeScale = 0f;
     }

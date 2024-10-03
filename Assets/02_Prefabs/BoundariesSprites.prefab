@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2783516844433201693}
   - component: {fileID: 1648413831285055447}
   m_Layer: 0
-  m_Name: Border2
+  m_Name: Grid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -96,7 +96,7 @@ GameObject:
   - component: {fileID: 3299681398757765529}
   - component: {fileID: 6162635996378062849}
   m_Layer: 0
-  m_Name: Square
+  m_Name: Border
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -181,7 +181,7 @@ GameObject:
   - component: {fileID: 8828985222218078769}
   - component: {fileID: 2831403124766906094}
   m_Layer: 0
-  m_Name: Square (4)
+  m_Name: Lines
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -222,7 +222,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 7dc61c5bfcfc31b489570e406ef2edbd, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -266,7 +266,7 @@ GameObject:
   - component: {fileID: 139085591548285380}
   - component: {fileID: 342827191383246723}
   m_Layer: 0
-  m_Name: Square (2)
+  m_Name: Border
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -351,7 +351,7 @@ GameObject:
   - component: {fileID: 102744889207511929}
   - component: {fileID: 5902441565822403480}
   m_Layer: 0
-  m_Name: Border3
+  m_Name: Grid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -436,7 +436,7 @@ GameObject:
   - component: {fileID: 6075017745968757271}
   - component: {fileID: 4565456823481328950}
   m_Layer: 0
-  m_Name: Square (5)
+  m_Name: Lines
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -477,7 +477,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 7dc61c5bfcfc31b489570e406ef2edbd, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -564,7 +564,7 @@ GameObject:
   - component: {fileID: 771248959847792521}
   - component: {fileID: 4659868182223005669}
   m_Layer: 0
-  m_Name: Square (6)
+  m_Name: Lines
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -605,7 +605,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 7dc61c5bfcfc31b489570e406ef2edbd, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -649,7 +649,7 @@ GameObject:
   - component: {fileID: 3333648119541470165}
   - component: {fileID: 3968325567735963140}
   m_Layer: 0
-  m_Name: Border4
+  m_Name: Grid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -734,7 +734,7 @@ GameObject:
   - component: {fileID: 8495966927317266312}
   - component: {fileID: 1580615451254419738}
   m_Layer: 0
-  m_Name: Square (3)
+  m_Name: Border
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -819,7 +819,7 @@ GameObject:
   - component: {fileID: 833576459541953092}
   - component: {fileID: 6045275808742758457}
   m_Layer: 0
-  m_Name: Square (1)
+  m_Name: Border
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -904,7 +904,7 @@ GameObject:
   - component: {fileID: 4678625226640541860}
   - component: {fileID: 1763856628791098940}
   m_Layer: 0
-  m_Name: Square (7)
+  m_Name: Lines
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -945,7 +945,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 7dc61c5bfcfc31b489570e406ef2edbd, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -989,7 +989,7 @@ GameObject:
   - component: {fileID: 7927306112116961368}
   - component: {fileID: 5408103062073269897}
   m_Layer: 0
-  m_Name: Border1
+  m_Name: Grid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

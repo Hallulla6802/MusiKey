@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class MouseBoundaries : MonoBehaviour
 {
-
-    public Camera _mainCamBoundaries; // C�mara principal para convertir de espacio de pantalla a espacio del mundo
+#region oldCode
+/*     public Camera _mainCamBoundaries; // C�mara principal para convertir de espacio de pantalla a espacio del mundo
     [Space]
     public Transform mouseSprite; // El objeto que sigue al mouse (un sprite o punto)
     public Transform boundaryOrigin; // Origen del l�mite para definir la zona en el mundo
@@ -61,5 +61,61 @@ public class MouseBoundaries : MonoBehaviour
         // Dibujar los l�mites del �rea permitida en el editor para referencia visual
         Gizmos.color = Color.green;
         Gizmos.DrawWireCube(boundaryOrigin.position, _boundarySize);
+    } */
+    #endregion oldCode
+    // Límites de movimiento que deseas en el eje X e Y para el mouse
+    public UIManagerCJ uiManager;
+    public float minX = -3.6f; // Límite izquierdo
+    public float maxX = 3.6f;  // Límite derecho
+    public float minY = -3.6f; // Límite inferior
+    public float maxY = 3.6f;  // Límite superior
+
+    public float mouseSensi = 100f;
+    // Posición actual controlada por el mouse
+    private Vector2 currentPosition;
+    void Start()
+    {
+        // Bloquear el cursor en el centro y hacerlo invisible
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+
+        // Inicializa la posición actual
+        currentPosition = Vector2.zero;
     }
+
+    void Update()
+    {
+        if(!uiManager.isPaused)
+        {
+            // Obtener el movimiento del mouse
+            float mouseX = Input.GetAxis("Mouse X") * mouseSensi * Time.deltaTime;
+            float mouseY = Input.GetAxis("Mouse Y") * mouseSensi * Time.deltaTime;
+
+            // Actualizar la posición según el movimiento del mouse
+            currentPosition.x += mouseX;
+            currentPosition.y += mouseY;
+
+            // Restringir el movimiento a los límites definidos
+            currentPosition.x = Mathf.Clamp(currentPosition.x, minX, maxX);
+            currentPosition.y = Mathf.Clamp(currentPosition.y, minY, maxY);
+
+            // Aquí puedes usar la nueva posición del mouse para mover objetos o cámaras
+            // Por ejemplo, mover una cámara o un objeto en el mundo según los límites:
+            transform.position = new Vector3(currentPosition.x, currentPosition.y, transform.position.z);
+
+            // Si solo quieres confinar el mouse visualmente en la UI, podrías usar esto para actualizar algún elemento en pantalla.
+        }
+    }
+    void OnDrawGizmos()
+    {
+        // Establece el color de los Gizmos
+        Gizmos.color = Color.green;
+
+        // Dibujar un cuadro alrededor de los límites
+        Gizmos.DrawLine(new Vector3(minX, minY, transform.position.z), new Vector3(maxX, minY, transform.position.z)); // Línea inferior
+        Gizmos.DrawLine(new Vector3(maxX, minY, transform.position.z), new Vector3(maxX, maxY, transform.position.z)); // Línea derecha
+        Gizmos.DrawLine(new Vector3(maxX, maxY, transform.position.z), new Vector3(minX, maxY, transform.position.z)); // Línea superior
+        Gizmos.DrawLine(new Vector3(minX, maxY, transform.position.z), new Vector3(minX, minY, transform.position.z)); // Línea izquierda
+    }
+    
 }
