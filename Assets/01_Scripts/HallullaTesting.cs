@@ -4,44 +4,44 @@ using UnityEngine;
 
 public class HallullaTesting : MonoBehaviour
 {
-    public GameObject objetoAScalar;  // El objeto que será escalado
-    public float escalaMin = 0.2f;  // Tamaño mínimo de escala
-    public float escalaMax = 1.2f;    // Tamaño máximo de escala
-    public float distanciaMin = 1f;  // Distancia mínima para aplicar la escala más grande
-    public float distanciaMax = 12f; // Distancia máxima para aplicar la escala más pequeña
-    public LayerMask layerMask; // Capa de los objetos que pueden ser detectados por el raycast
+    // Límites de movimiento que deseas en el eje X e Y para el mouse
+    public float minX = -3.6f; // Límite izquierdo
+    public float maxX = 3.6f;  // Límite derecho
+    public float minY = -3.6f; // Límite inferior
+    public float maxY = 3.6f;  // Límite superior
 
-    SpriteRenderer spRenderer;
+    public float mouseSensi = 100f;
+    // Posición actual controlada por el mouse
+    private Vector2 currentPosition;
     void Start()
     {
-        spRenderer = objetoAScalar.GetComponent<SpriteRenderer>();
+        // Bloquear el cursor en el centro y hacerlo invisible
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+
+        // Inicializa la posición actual
+        currentPosition = Vector2.zero;
     }
 
     void Update()
     {
-        // Lanzar un raycast hacia adelante desde la posición del objeto actual
-        Ray ray = new Ray(transform.position, transform.forward);
-        RaycastHit hit;
+        // Obtener el movimiento del mouse
+        float mouseX = Input.GetAxis("Mouse X") * mouseSensi * Time.deltaTime;
+        float mouseY = Input.GetAxis("Mouse Y") * mouseSensi * Time.deltaTime;
 
-        // Si el raycast detecta un objeto en el layer especificado
-        if (Physics.Raycast(ray, out hit, distanciaMax, layerMask))
-        {
-            // Obtener la distancia al objeto detectado
-            float distancia = hit.distance;
+        // Actualizar la posición según el movimiento del mouse
+        currentPosition.x += mouseX;
+        currentPosition.y += mouseY;
 
-            // Normalizar la distancia entre 0 y 1
-            float factorEscala = Mathf.InverseLerp(distanciaMax, distanciaMin, distancia);
+        // Restringir el movimiento a los límites definidos
+        currentPosition.x = Mathf.Clamp(currentPosition.x, minX, maxX);
+        currentPosition.y = Mathf.Clamp(currentPosition.y, minY, maxY);
 
-            // Aplicar la escala al objeto, interpolando entre la escala mínima y máxima
-            float escalaActual = Mathf.Lerp(escalaMin, escalaMax, factorEscala);
-            objetoAScalar.transform.localScale = new Vector3(escalaActual, escalaActual, escalaActual);
-            spRenderer.enabled = true;
-        }
-        else
-        {
-            // Si no se detecta nada, puedes opcionalmente hacer que el objeto vuelva a su tamaño mínimo
-            objetoAScalar.transform.localScale = new Vector3(escalaMin, escalaMin, escalaMin);
-            spRenderer.enabled = false;
-        }
+        // Aquí puedes usar la nueva posición del mouse para mover objetos o cámaras
+        // Por ejemplo, mover una cámara o un objeto en el mundo según los límites:
+        transform.position = new Vector3(currentPosition.x, currentPosition.y, transform.position.z);
+
+        // Si solo quieres confinar el mouse visualmente en la UI, podrías usar esto para actualizar algún elemento en pantalla.
+        
     }
 }

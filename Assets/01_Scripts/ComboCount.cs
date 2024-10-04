@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class ComboCount : MonoBehaviour
@@ -14,20 +15,14 @@ public class ComboCount : MonoBehaviour
         gamMan = FindObjectOfType<GameManager>();
         upUI = FindObjectOfType<UpdateUIManager>();
     }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (!triggeredSprites.Contains(other) && IsCorrectKeyInput(other))
-        {
-            AddCombo(other);
-        }
-    }
-
     private void OnTriggerStay(Collider other)
     {
-        if (!triggeredSprites.Contains(other) && IsCorrectKeyInput(other))
+        if (!triggeredSprites.Contains(other))
         {
-            AddCombo(other);
+            if(IsCorrectKeyInput(other))
+            {
+                AddCombo(other);
+            }
         }
     }
 

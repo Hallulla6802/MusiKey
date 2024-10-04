@@ -74,11 +74,13 @@ public class NoteLimit : MonoBehaviour
         {
             gamMan.playerLife = gamMan.playermaxLife;
             upUI.UpdateLifeImage();
+            upUI.UpdateUIText();
         }
         else
         {
             gamMan.playerLife += recuperativeAmount;
             upUI.UpdateLifeImage();
+            upUI.UpdateUIText();
         }
     }
 

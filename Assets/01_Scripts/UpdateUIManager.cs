@@ -11,7 +11,7 @@ public class UpdateUIManager : MonoBehaviour
     public TextMeshPro missesDisplay;
     [Space]
     public Image lifeDisplay;
-    
+    public float interpolationSpeed = 5f;
 
     private float currentHealth;
     private float maxHealth;
@@ -27,7 +27,11 @@ public class UpdateUIManager : MonoBehaviour
 
         UpdateUIText();
     }
-
+    void Update()
+    {
+        float healhPercentage = Mathf.Clamp(currentHealth / maxHealth, 0f, 1.0f);
+        lifeDisplay.fillAmount = Mathf.Lerp(lifeDisplay.fillAmount, healhPercentage, Time.deltaTime * interpolationSpeed);
+    }
     public void UpdateUIText()
     {
         comboDisplay.text = "x" + gamMan.combos.ToString();
@@ -40,11 +44,7 @@ public class UpdateUIManager : MonoBehaviour
         if(lifeDisplay != null)
         {
             currentHealth = gamMan.playerLife;
-            maxHealth = gamMan.playermaxLife;
-
-            float healhPercentage = Mathf.Clamp(currentHealth / maxHealth, 0f, 1.0f);
-
-            lifeDisplay.fillAmount = healhPercentage;
+            maxHealth = gamMan.playermaxLife;            
         }
     }
 }

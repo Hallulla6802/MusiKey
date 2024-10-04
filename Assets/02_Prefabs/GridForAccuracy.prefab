@@ -27,8 +27,8 @@ Transform:
   m_GameObject: {fileID: 342187506016612363}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.75, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: -1}
+  m_LocalPosition: {x: -2.7, y: 0, z: 0}
+  m_LocalScale: {x: 0.2, y: 0.2, z: -0.2}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 4293415042530038027}
@@ -74,8 +74,9 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: fe2579adea003a34eba8e55367141066, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.0627451}
+  m_Sprite: {fileID: -5177388603050735206, guid: e8538080f8d4e1843a018e382649629f,
+    type: 3}
+  m_Color: {r: 0.3018868, g: 0.3018868, b: 0.3018868, a: 0.2}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -97,11 +98,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 661432a6faa3f8645a16ae3b10545fdb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objetoAScalar: {fileID: 0}
+  objetoAScalar: {fileID: 342187506016612363}
   escalaMin: 0.2
-  escalaMax: 1.2
+  escalaMax: 2.2
   distanciaMin: 1
-  distanciaMax: 12
+  distanciaMax: 13
   layerMask:
     serializedVersion: 2
     m_Bits: 64
@@ -132,8 +133,8 @@ Transform:
   m_GameObject: {fileID: 2010579765644898407}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.75, y: -2.75, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: -1}
+  m_LocalPosition: {x: 2.7, y: -2.7, z: 0}
+  m_LocalScale: {x: 0.2, y: 0.2, z: -0.2}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 4293415042530038027}
@@ -179,8 +180,9 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: fe2579adea003a34eba8e55367141066, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.0627451}
+  m_Sprite: {fileID: -5177388603050735206, guid: e8538080f8d4e1843a018e382649629f,
+    type: 3}
+  m_Color: {r: 0.3018868, g: 0.3018868, b: 0.3018868, a: 0.2}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -202,11 +204,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 661432a6faa3f8645a16ae3b10545fdb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objetoAScalar: {fileID: 0}
+  objetoAScalar: {fileID: 2010579765644898407}
   escalaMin: 0.2
-  escalaMax: 1.2
+  escalaMax: 2.2
   distanciaMin: 1
-  distanciaMax: 12
+  distanciaMax: 13
   layerMask:
     serializedVersion: 2
     m_Bits: 64
@@ -237,8 +239,8 @@ Transform:
   m_GameObject: {fileID: 2331649246689782187}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.75, y: 2.75, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: -1}
+  m_LocalPosition: {x: -2.7, y: 2.7, z: 0}
+  m_LocalScale: {x: 0.2, y: 0.2, z: -0.2}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 4293415042530038027}
@@ -284,8 +286,9 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: fe2579adea003a34eba8e55367141066, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.0627451}
+  m_Sprite: {fileID: -5177388603050735206, guid: e8538080f8d4e1843a018e382649629f,
+    type: 3}
+  m_Color: {r: 0.3018868, g: 0.3018868, b: 0.3018868, a: 0.2}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -307,11 +310,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 661432a6faa3f8645a16ae3b10545fdb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objetoAScalar: {fileID: 0}
+  objetoAScalar: {fileID: 2331649246689782187}
   escalaMin: 0.2
-  escalaMax: 1.2
+  escalaMax: 2.2
   distanciaMin: 1
-  distanciaMax: 12
+  distanciaMax: 13
   layerMask:
     serializedVersion: 2
     m_Bits: 64
@@ -343,7 +346,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: -1}
+  m_LocalScale: {x: 0.2, y: 0.2, z: -0.2}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 4293415042530038027}
@@ -389,8 +392,9 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: fe2579adea003a34eba8e55367141066, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.0627451}
+  m_Sprite: {fileID: -5177388603050735206, guid: e8538080f8d4e1843a018e382649629f,
+    type: 3}
+  m_Color: {r: 0.3018868, g: 0.3018868, b: 0.3018868, a: 0.2}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -412,11 +416,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 661432a6faa3f8645a16ae3b10545fdb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objetoAScalar: {fileID: 0}
+  objetoAScalar: {fileID: 5098628724406606544}
   escalaMin: 0.2
-  escalaMax: 1.2
+  escalaMax: 2.2
   distanciaMin: 1
-  distanciaMax: 12
+  distanciaMax: 13
   layerMask:
     serializedVersion: 2
     m_Bits: 64
@@ -447,8 +451,8 @@ Transform:
   m_GameObject: {fileID: 5266776110799564419}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.75, y: -2.75, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: -1}
+  m_LocalPosition: {x: -2.7, y: -2.7, z: 0}
+  m_LocalScale: {x: 0.2, y: 0.2, z: -0.2}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 4293415042530038027}
@@ -494,8 +498,9 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: fe2579adea003a34eba8e55367141066, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.0627451}
+  m_Sprite: {fileID: -5177388603050735206, guid: e8538080f8d4e1843a018e382649629f,
+    type: 3}
+  m_Color: {r: 0.3018868, g: 0.3018868, b: 0.3018868, a: 0.2}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -517,11 +522,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 661432a6faa3f8645a16ae3b10545fdb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objetoAScalar: {fileID: 0}
+  objetoAScalar: {fileID: 5266776110799564419}
   escalaMin: 0.2
-  escalaMax: 1.2
+  escalaMax: 2.2
   distanciaMin: 1
-  distanciaMax: 12
+  distanciaMax: 13
   layerMask:
     serializedVersion: 2
     m_Bits: 64
@@ -552,8 +557,8 @@ Transform:
   m_GameObject: {fileID: 5739017845176599300}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.75, y: 2.75, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: -1}
+  m_LocalPosition: {x: 2.7, y: 2.7, z: 0}
+  m_LocalScale: {x: 0.2, y: 0.2, z: -0.2}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 4293415042530038027}
@@ -599,8 +604,9 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: fe2579adea003a34eba8e55367141066, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.0627451}
+  m_Sprite: {fileID: -5177388603050735206, guid: e8538080f8d4e1843a018e382649629f,
+    type: 3}
+  m_Color: {r: 0.3018868, g: 0.3018868, b: 0.3018868, a: 0.2}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -622,11 +628,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 661432a6faa3f8645a16ae3b10545fdb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objetoAScalar: {fileID: 0}
+  objetoAScalar: {fileID: 5739017845176599300}
   escalaMin: 0.2
-  escalaMax: 1.2
+  escalaMax: 2.2
   distanciaMin: 1
-  distanciaMax: 12
+  distanciaMax: 13
   layerMask:
     serializedVersion: 2
     m_Bits: 64
@@ -697,8 +703,8 @@ Transform:
   m_GameObject: {fileID: 7521273486405331882}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.75, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: -1}
+  m_LocalPosition: {x: 0, y: 2.7, z: 0}
+  m_LocalScale: {x: 0.2, y: 0.2, z: -0.2}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 4293415042530038027}
@@ -744,8 +750,9 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: fe2579adea003a34eba8e55367141066, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.0627451}
+  m_Sprite: {fileID: -5177388603050735206, guid: e8538080f8d4e1843a018e382649629f,
+    type: 3}
+  m_Color: {r: 0.3018868, g: 0.3018868, b: 0.3018868, a: 0.2}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -767,11 +774,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 661432a6faa3f8645a16ae3b10545fdb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objetoAScalar: {fileID: 0}
+  objetoAScalar: {fileID: 7521273486405331882}
   escalaMin: 0.2
-  escalaMax: 1.2
+  escalaMax: 2.2
   distanciaMin: 1
-  distanciaMax: 12
+  distanciaMax: 13
   layerMask:
     serializedVersion: 2
     m_Bits: 64
@@ -802,8 +809,8 @@ Transform:
   m_GameObject: {fileID: 7586035248261879864}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.75, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: -1}
+  m_LocalPosition: {x: 2.7, y: 0, z: 0}
+  m_LocalScale: {x: 0.2, y: 0.2, z: -0.2}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 4293415042530038027}
@@ -849,8 +856,9 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: fe2579adea003a34eba8e55367141066, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.0627451}
+  m_Sprite: {fileID: -5177388603050735206, guid: e8538080f8d4e1843a018e382649629f,
+    type: 3}
+  m_Color: {r: 0.3018868, g: 0.3018868, b: 0.3018868, a: 0.2}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -872,11 +880,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 661432a6faa3f8645a16ae3b10545fdb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objetoAScalar: {fileID: 0}
+  objetoAScalar: {fileID: 7586035248261879864}
   escalaMin: 0.2
-  escalaMax: 1.2
+  escalaMax: 2.2
   distanciaMin: 1
-  distanciaMax: 12
+  distanciaMax: 13
   layerMask:
     serializedVersion: 2
     m_Bits: 64
@@ -907,8 +915,8 @@ Transform:
   m_GameObject: {fileID: 8803258261329835560}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -2.75, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: -1}
+  m_LocalPosition: {x: 0, y: -2.7, z: 0}
+  m_LocalScale: {x: 0.2, y: 0.2, z: -0.2}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 4293415042530038027}
@@ -954,8 +962,9 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: fe2579adea003a34eba8e55367141066, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.0627451}
+  m_Sprite: {fileID: -5177388603050735206, guid: e8538080f8d4e1843a018e382649629f,
+    type: 3}
+  m_Color: {r: 0.3018868, g: 0.3018868, b: 0.3018868, a: 0.2}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -977,11 +986,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 661432a6faa3f8645a16ae3b10545fdb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objetoAScalar: {fileID: 0}
+  objetoAScalar: {fileID: 8803258261329835560}
   escalaMin: 0.2
-  escalaMax: 1.2
+  escalaMax: 2.2
   distanciaMin: 1
-  distanciaMax: 12
+  distanciaMax: 13
   layerMask:
     serializedVersion: 2
     m_Bits: 64
