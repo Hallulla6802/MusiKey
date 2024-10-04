@@ -5,7 +5,6 @@ using UnityEngine;
 public class NoteMovementScript : MonoBehaviour
 {
     private float noteSpeed;  // La velocidad que la nota necesita para llegar en el tiempo correcto
-
     void Start()
     {
         // Encontrar el objeto llamado "BoundariesSprites" (la grilla) para calcular la distancia
@@ -16,7 +15,7 @@ public class NoteMovementScript : MonoBehaviour
             // Encontrar el script RhythScript
             RhythScript rhythScript = FindObjectOfType<RhythScript>();
 
-            // Calcular la distancia desde la posición inicial de la nota hasta la grilla
+            // Calcular la distancia desde la posiciï¿½n inicial de la nota hasta la grilla
             float distanceToTravel = Vector3.Distance(transform.position, targetGrid.position);
             // Calcular el tiempo que la nota debe tardar en llegar (segundos por beat)
             float timeToReachGrid = rhythScript.secondsPerBeat;
@@ -25,15 +24,16 @@ public class NoteMovementScript : MonoBehaviour
         }
         else
         {
-            Debug.LogError("No se encontró un objeto llamado 'BoundariesSprites'. Asegúrate de que el nombre sea correcto.");
+            Debug.LogError("No se encontrï¿½ un objeto llamado 'BoundariesSprites'. Asegï¿½rate de que el nombre sea correcto.");
             return;
         }
     }
 
     void Update()
     {
-        // Aquí no movemos la nota directamente hacia la grilla, sino que usamos la velocidad calculada
+        // Aquï¿½ no movemos la nota directamente hacia la grilla, sino que usamos la velocidad calculada
         // para que se mueva hacia adelante con la velocidad correcta
         transform.Translate(Vector3.back * noteSpeed * Time.deltaTime);
+        
     }
 }

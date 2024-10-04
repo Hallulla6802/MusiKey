@@ -83,8 +83,7 @@ public class DestoyNotesScript : MonoBehaviour
 
         // Aplica los cambios al sistema de partículas
         bgParticles.SetParticles(particles, cantidadParticulas);
-    }
-    private float detectionRadius = 0.7f; // Ajusta este valor según el rango que estés utilizando
+    } 
 
     private void OnDrawGizmos()
     {

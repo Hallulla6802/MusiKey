@@ -5,34 +5,35 @@ using UnityEngine;
 public class RhythScript : MonoBehaviour
 {
   
-    public AudioSource audioSource;  // La música que estás reproduciendo
-    public float bpm;  // El BPM de la canción
+    public AudioSource audioSource;  // La mï¿½sica que estï¿½s reproduciendo
+    public float bpm;  // El BPM de la canciï¿½n
     public Transform[] spawnPoints;  // Los 6 puntos de spawn
     public GameObject[] noteTypes;   // Los dos tipos de notas (Prefab 1 y Prefab 2)
-
     public float secondsPerBeat;  // Tiempo entre beats
-    public float songPosition;    // Tiempo actual de la canción en segundos
-    public float nextNoteTime;    // Controla cuándo spawnear la siguiente nota
+    public float songPosition;    // Tiempo actual de la canciï¿½n en segundos
+    public float nextNoteTime;    // Controla cuï¿½ndo spawnear la siguiente nota
     public float bpmDivider = 2f;
 
     void Start()
     {
-        float adjustedBPM = bpm / bpmDivider;
+        float adjustedBPM = bpm / (bpmDivider > 0 ? bpmDivider : 1);
         secondsPerBeat = 60f / adjustedBPM;  // Calcular tiempo entre beats
-        nextNoteTime = secondsPerBeat;  // La primera nota debería aparecer en el primer beat
+        nextNoteTime = secondsPerBeat;  // La primera nota deberï¿½a aparecer en el primer beat
     }
 
     void Update()
-    {
-        // Actualizar el tiempo de la canción
+    {   
+
+        // Actualizar el tiempo de la canciï¿½n
         songPosition = audioSource.time;
 
         // Si es el momento de spawnear una nueva nota
         if (songPosition >= nextNoteTime)
         {
             SpawnRandomNote();
-            nextNoteTime += secondsPerBeat;  // Programar la próxima nota
+            nextNoteTime += secondsPerBeat;  // Programar la prï¿½xima nota
         }
+        
     }
 
     void SpawnRandomNote()
