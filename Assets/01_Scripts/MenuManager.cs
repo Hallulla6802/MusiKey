@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class MenuManager : MonoBehaviour
 
 {
+
     public void GoToMenu()
     {
         Time.timeScale = 1f;

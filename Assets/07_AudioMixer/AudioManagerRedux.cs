@@ -15,6 +15,7 @@ public class AudioManagerRedux : MonoBehaviour
 
     void Start()
     {
+        Time.timeScale = 1f;
         LoadVolume();
     }
     public void UpdateMasterVolume(float volume)
